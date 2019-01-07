@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--SQL query wrapped in No terminating semi-colon -->
+<custom-sql>
+	<sql id="com.liferay.sample.service.persistence.EmployeeFinder.findbyDesignation">
+		   <![CDATA[
+				SELECT 
+				
+					*
+				 
+				 From
+				
+					custom_employee e 
+				
+				WHERE
+				
+			    	e.designation 
+			 
+			 		like ?
+		     ]]>
+	   </sql>
+	   
+	   <sql id="com.liferay.sample.service.persistence.EmployeeFinder.employeeName">
+		   <![CDATA[
+				SELECT 
+				
+					 e.employeeName,
+					 e.employeeid
+				 
+				 From
+				
+					custom_employee e 
+		     ]]>
+	   </sql>
+	   <sql id="com.hays.search.form.service.persistence.SreeSoluctionsFinder.getUserDetails">
+		   <![CDATA[
+		  	 	SELECT * FROM user_
+		   ]]>
+	   </sql>
+	   
+	   <sql id="com.hays.search.form.service.persistence.SreeSoluctionsFinder.getNameAndDesignation">
+	   
+	   <![CDATA[
+	   			SELECT * FROM 
+	   			
+	   			      user_ 
+	   			      
+	   			      WHERE  
+	   			      
+	   			     	 jobtitle like ?
+	   			      
+	   			      and 
+	   			      
+	   			     	 firstname like ?;
+	       ]]>
+	   </sql>
+	   
+	   
+	    <sql id="com.hays.search.form.service.persistence.SreeSoluctionsFinder.getNameAndOrDesignation">
+	   
+	   <![CDATA[
+	   			SELECT * FROM 
+	   			
+	   			      user_ 
+	   			      
+	   			      WHERE  
+	   			      
+	   			     	 jobtitle like ?
+	   			      
+	   			      or 
+	   			      
+	   			     	 firstname like ?;
+	           ]]>
+	   </sql>
+	   
+	   
+</custom-sql>

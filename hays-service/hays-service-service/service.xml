@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_0_0.dtd">
+
+<service-builder package-path="com.hays.search.form">
+	<author>Sreenivasulu</author>
+	<namespace>hays</namespace>
+	
+	<entity name="Employee" local-service="true" remote-service="true">
+
+		<column name="employeeId" type="long" primary="true" />
+
+		<column name="employeeName" type="String" />
+		<column name="designation" type="String" />
+		<column name="address" type="String" />
+		<column name="mobileNumber" type="String" />
+		<column name="emailAddress" type="String" />
+
+
+		<!-- Audit Fields -->
+
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+
+		<column name="createdDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<order by="desc">
+			<order-column name="employeeId"></order-column>
+		</order>
+	
+		<finder return-type="Employee" name="Employee_Name">
+			<finder-column name="employeeName"/>
+		</finder>
+		
+		<finder return-type="Collection" name="Designation">
+			<finder-column name="designation"/>
+		</finder>
+	</entity>
+	
+	<entity name="SreeSoluctions" local-service="true" remote-service="true">
+	
+		<column name="soluctionId" type="long" primary="true"/>
+		
+		<column name="branchId" type="String" />
+		<column name="branchAddress" type="String" />
+		<column name="telephoneNumber" type="String" />
+		<column name="officeEmailAddress" type="String" />
+		<column name="employeeId" type="long"/>
+		
+		<order by="desc">
+			<order-column name="soluctionId"/>
+		</order>
+		
+	</entity>
+</service-builder>

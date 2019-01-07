@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean class="com.hays.search.form.service.impl.EmployeeLocalServiceImpl" id="com.hays.search.form.service.EmployeeLocalService" />
+	<bean class="com.hays.search.form.service.impl.EmployeeServiceImpl" id="com.hays.search.form.service.EmployeeService" />
+	<bean class="com.hays.search.form.service.persistence.impl.EmployeePersistenceImpl" id="com.hays.search.form.service.persistence.EmployeePersistence" parent="basePersistence" />
+	<bean class="com.hays.search.form.service.persistence.impl.EmployeeFinderImpl" id="com.hays.search.form.service.persistence.EmployeeFinder" parent="basePersistence" />
+	<bean class="com.hays.search.form.service.impl.SreeSoluctionsLocalServiceImpl" id="com.hays.search.form.service.SreeSoluctionsLocalService" />
+	<bean class="com.hays.search.form.service.impl.SreeSoluctionsServiceImpl" id="com.hays.search.form.service.SreeSoluctionsService" />
+	<bean class="com.hays.search.form.service.persistence.impl.SreeSoluctionsPersistenceImpl" id="com.hays.search.form.service.persistence.SreeSoluctionsPersistence" parent="basePersistence" />
+	<bean class="com.hays.search.form.service.persistence.impl.SreeSoluctionsFinderImpl" id="com.hays.search.form.service.persistence.SreeSoluctionsFinder" parent="basePersistence" />
+</beans>

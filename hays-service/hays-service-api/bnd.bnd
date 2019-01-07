@@ -1,0 +1,9 @@
+Bundle-Name: hays-service-api
+Bundle-SymbolicName: com.hays.search.form.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.hays.search.form.exception,\
+	com.hays.search.form.model,\
+	com.hays.search.form.service,\
+	com.hays.search.form.service.persistence
+-includeresource: META-INF/service.xml=../hays-service-service/service.xml
