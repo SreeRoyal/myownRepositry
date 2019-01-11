@@ -1,0 +1,4 @@
+Bundle-Name: SalaryGuide
+Bundle-SymbolicName: com.hays.portlet
+Bundle-Version: 1.0.0
+Export-Package: com.hays.portlet.constants
