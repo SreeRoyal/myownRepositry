@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="false" default-lazy="false">
+	<import class="com.hays.service.salaryguide.model.HaysSalaryGuide" />
+	<import class="com.hays.service.salaryguide.model.HaysSalGuideUserDataUk" />
+	<import class="com.hays.service.salaryguide.model.HaysSGUserData" />
+	<class name="com.hays.service.salaryguide.model.impl.HaysSalaryGuideImpl" table="webcmscustom.HAYS_SALARY_GUIDE">
+		<id name="SGID" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="INDUSTRY" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="LOCATIONNAME" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="SECTOR" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="POSITIONTYPE" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="AREA" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="COMPANY" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="POSITIONNAME" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="SALARYRANGE" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="SALARYTYPICAL" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="NOTE" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="SITELOCALE" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="SGDDOCNAME" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="SALARYTYPE" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.hays.service.salaryguide.model.impl.HaysSalGuideUserDataUkImpl" table="webcmscustom.HAYSSALGUSERDATAUK">
+		<id name="SGUSERID" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="SGFORMINDUSTRY" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="SGFORMSECTOR" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="SGFORMAREA" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="SGFORMPOSITIONTYPE" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="SGFORMPOSITIONNAME" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="LOCATIONNAME" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="SGCOMPANY" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="SGCURRENTSALARY" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="SGEMAIL" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="CREATETIMESTAMP" type="org.hibernate.type.TimestampType" />
+		<property name="SGFROMLOCALE" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.hays.service.salaryguide.model.impl.HaysSGUserDataImpl" table="webcmscustom.HAYSSGUSERDATA">
+		<id name="SGUSERID" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="SGUSERNAME" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="SGJOBTITLE" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="SGORGANIZATION" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="SGLOCATION" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="SGEMAILADDRESS" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="FROMLOCALE" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="CREATETIMESTAMP" type="org.hibernate.type.TimestampType" />
+	</class>
+</hibernate-mapping>

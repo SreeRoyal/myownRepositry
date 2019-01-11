@@ -1,0 +1,5 @@
+Bundle-Name: SalaryGuideFormPortlet
+Bundle-SymbolicName:com.hays.sg.form.portlet
+Bundle-Version: 1.0.0
+Export-Package: com.hays.sg.form.portlet.constants
+

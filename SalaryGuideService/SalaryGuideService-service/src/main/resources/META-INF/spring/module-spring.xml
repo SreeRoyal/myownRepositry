@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean class="com.hays.service.salaryguide.service.impl.HaysSalaryGuideLocalServiceImpl" id="com.hays.service.salaryguide.service.HaysSalaryGuideLocalService" />
+	<bean class="com.hays.service.salaryguide.service.impl.HaysSalaryGuideServiceImpl" id="com.hays.service.salaryguide.service.HaysSalaryGuideService" />
+	<bean class="com.hays.service.salaryguide.service.persistence.impl.HaysSalaryGuidePersistenceImpl" id="com.hays.service.salaryguide.service.persistence.HaysSalaryGuidePersistence" parent="basePersistence" />
+	<bean class="com.hays.service.salaryguide.service.persistence.impl.HaysSalaryGuideFinderImpl" id="com.hays.service.salaryguide.service.persistence.HaysSalaryGuideFinder" parent="basePersistence" />
+	<bean class="com.hays.service.salaryguide.service.impl.HaysSalGuideUserDataUkLocalServiceImpl" id="com.hays.service.salaryguide.service.HaysSalGuideUserDataUkLocalService" />
+	<bean class="com.hays.service.salaryguide.service.impl.HaysSalGuideUserDataUkServiceImpl" id="com.hays.service.salaryguide.service.HaysSalGuideUserDataUkService" />
+	<bean class="com.hays.service.salaryguide.service.persistence.impl.HaysSalGuideUserDataUkPersistenceImpl" id="com.hays.service.salaryguide.service.persistence.HaysSalGuideUserDataUkPersistence" parent="basePersistence" />
+	<bean class="com.hays.service.salaryguide.service.impl.HaysSGUserDataLocalServiceImpl" id="com.hays.service.salaryguide.service.HaysSGUserDataLocalService" />
+	<bean class="com.hays.service.salaryguide.service.impl.HaysSGUserDataServiceImpl" id="com.hays.service.salaryguide.service.HaysSGUserDataService" />
+	<bean class="com.hays.service.salaryguide.service.persistence.impl.HaysSGUserDataPersistenceImpl" id="com.hays.service.salaryguide.service.persistence.HaysSGUserDataPersistence" parent="basePersistence" />
+</beans>

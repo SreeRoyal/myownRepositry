@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_0_0.dtd">
+
+<service-builder package-path="com.hays.service.salaryguide">
+	<namespace>Hays</namespace>
+    <entity name="HaysSalaryGuide" local-service="true" table="webcmscustom.HAYS_SALARY_GUIDE">
+        <column name="INDUSTRY" type="String"></column>
+        <column name="LOCATIONNAME" type="String"></column>
+        <column name="SECTOR" type="String"></column>
+        <column name="POSITIONTYPE" type="String"></column>
+        <column name="AREA" type="String"></column>
+        <column name="COMPANY" type="String"></column>
+        <column name="POSITIONNAME" type="String"></column>
+        <column name="SALARYRANGE" type="String"></column>
+        <column name="SALARYTYPICAL" type="String"></column>
+        <column name="NOTE" type="String"></column>
+        <column name="SITELOCALE" type="String"></column>
+        <column name="SGDDOCNAME" type="String"></column>
+        <column name="SGID" type="String" primary="true"></column>
+        <column name="SALARYTYPE" type="String"/>
+        
+        <finder name="Industry" return-type="Collection">
+            <finder-column name="INDUSTRY"/>
+        </finder>
+        
+        <finder name="Locale" return-type="Collection">
+            <finder-column name="SITELOCALE"/>
+        </finder>
+    </entity>
+    
+    <entity name="HaysSalGuideUserDataUk" local-service="true" remote-service="true" table="webcmscustom.HAYSSALGUSERDATAUK">
+    	
+    	<!--  Slary Checker UserId  is equal to PrimaryId-->
+   		<column name="SGUSERID" type="long" primary="true"/>
+   		
+    	<column name="SGFORMINDUSTRY" type="String"/>
+    	<column name="SGFORMSECTOR" type="String"/>
+    	<column name="SGFORMAREA" type="String"/>
+    	<column name="SGFORMPOSITIONTYPE" type="String"/>
+    	<column name="SGFORMPOSITIONNAME" type="String"/>
+    	<column name="LOCATIONNAME" type="String"/>
+    	<column name="SGCOMPANY" type="String"/>
+    	<column name="SGCURRENTSALARY" type="long"/>
+    	<column name="SGEMAIL" type="String"/>
+    	<column name="CREATETIMESTAMP" type="Date"/>
+    	<column name="SGFROMLOCALE" type="String"/>
+    	
+    	<order by="desc">
+    		<order-column name="SGUSERID"/>
+    	</order>
+    	
+    	<finder return-type="Collection" name="SiteLocale">
+    		<finder-column name="SGFROMLOCALE"/>
+    	</finder>
+    </entity>
+    
+    <entity name="HaysSGUserData" local-service="true" remote-service="true" table="webcmscustom.HAYSSGUSERDATA">
+    	
+    	<column name="SGUSERID" type="long" primary="true"/>
+    	
+    	<column name="SGUSERNAME" type="String"/>
+    	<column name="SGJOBTITLE" type="String"/>
+    	<column name="SGORGANIZATION" type="String"/>
+    	<column name="SGLOCATION" type="String"/>
+    	<column name="SGEMAILADDRESS" type="String"/>
+    	<column name="FROMLOCALE" type="String"></column>
+    	<column name="CREATETIMESTAMP" type="Date"/>
+    	
+    	<order by="desc">
+    		<order-column name="SGUSERID"/>
+    	</order>
+    	
+    	<finder return-type="Collection" name="FromLocale">
+    		<finder-column name="FROMLOCALE"/>
+    	</finder>
+    </entity>
+ 
+</service-builder>

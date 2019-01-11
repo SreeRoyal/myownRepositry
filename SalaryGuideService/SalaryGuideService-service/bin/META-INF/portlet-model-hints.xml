@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.hays.service.salaryguide.model.HaysSalaryGuide">
+		<field name="INDUSTRY" type="String" />
+		<field name="LOCATIONNAME" type="String" />
+		<field name="SECTOR" type="String" />
+		<field name="POSITIONTYPE" type="String" />
+		<field name="AREA" type="String" />
+		<field name="COMPANY" type="String" />
+		<field name="POSITIONNAME" type="String" />
+		<field name="SALARYRANGE" type="String" />
+		<field name="SALARYTYPICAL" type="String" />
+		<field name="NOTE" type="String" />
+		<field name="SITELOCALE" type="String" />
+		<field name="SGDDOCNAME" type="String" />
+		<field name="SGID" type="String" />
+		<field name="SALARYTYPE" type="String" />
+	</model>
+	<model name="com.hays.service.salaryguide.model.HaysSalGuideUserDataUk">
+		<field name="SGUSERID" type="long" />
+		<field name="SGFORMINDUSTRY" type="String" />
+		<field name="SGFORMSECTOR" type="String" />
+		<field name="SGFORMAREA" type="String" />
+		<field name="SGFORMPOSITIONTYPE" type="String" />
+		<field name="SGFORMPOSITIONNAME" type="String" />
+		<field name="LOCATIONNAME" type="String" />
+		<field name="SGCOMPANY" type="String" />
+		<field name="SGCURRENTSALARY" type="long" />
+		<field name="SGEMAIL" type="String" />
+		<field name="CREATETIMESTAMP" type="Date" />
+		<field name="SGFROMLOCALE" type="String" />
+	</model>
+	<model name="com.hays.service.salaryguide.model.HaysSGUserData">
+		<field name="SGUSERID" type="long" />
+		<field name="SGUSERNAME" type="String" />
+		<field name="SGJOBTITLE" type="String" />
+		<field name="SGORGANIZATION" type="String" />
+		<field name="SGLOCATION" type="String" />
+		<field name="SGEMAILADDRESS" type="String" />
+		<field name="FROMLOCALE" type="String" />
+		<field name="CREATETIMESTAMP" type="Date" />
+	</model>
+</model-hints>

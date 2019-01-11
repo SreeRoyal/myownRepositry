@@ -1,0 +1,9 @@
+Bundle-Name: SalaryGuideService-api
+Bundle-SymbolicName: com.hays.service.salaryguide.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.hays.service.salaryguide.exception,\
+	com.hays.service.salaryguide.model,\
+	com.hays.service.salaryguide.service,\
+	com.hays.service.salaryguide.service.persistence
+-includeresource: META-INF/service.xml=../SalaryGuideService-service/service.xml
